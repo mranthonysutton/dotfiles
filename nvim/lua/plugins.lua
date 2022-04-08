@@ -21,6 +21,7 @@ return require('packer').startup(function()
   use 'ayu-theme/ayu-vim'
   use 'dracula/vim'
   use 'arcticicestudio/nord-vim'
+  use 'lalitmee/cobalt2.nvim'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
