@@ -49,7 +49,6 @@ return require('packer').startup(function()
   use {'iamcco/markdown-preview.nvim', run="yarn install"}
   use 'norcalli/nvim-colorizer.lua'
   use 'tell-k/vim-autopep8'
-  --use 'vim-autoformat/vim-autoformat'
   use 'ap/vim-css-color'
   use 'mattn/emmet-vim'
 end
