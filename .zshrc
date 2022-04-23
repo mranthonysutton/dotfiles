@@ -22,7 +22,7 @@ alias cdwgu="cd ~/Storage/WGU"
 alias cdnotes="cd ~/Storage/notable-notes"
 alias cleanlatex="latexmk -c"
 alias cppcompile="g++ -Wall *.cpp && ./a.out"
-alias cppcompile="source ~/.zshrc"
+alias sourcezsh="source ~/.zshrc"
 
 plugins=(git zsh-syntax-highlighting yarn golang)
 
@@ -31,8 +31,7 @@ source $ZSH/oh-my-zsh.sh
 # Removes the user account in the path name
 prompt_context () {}
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+PS1='[%2d] $ '
 
 # NVM Loader
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"

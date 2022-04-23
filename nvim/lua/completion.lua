@@ -11,7 +11,8 @@ local function on_attach()
 end
 
 treesitterConfig.setup {
-  ensure_installed = "all",
+  ensure_installed = ("cpp", "css" "go", "graphql", "javascript", "json" "bibtex", "latex", "html", "python", "scss",
+  	"tsx", "typescript" "yaml"),
   highlight = {
     enable = true,
   },
