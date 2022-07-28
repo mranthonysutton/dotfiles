@@ -12,7 +12,7 @@ end
 
 treesitterConfig.setup {
   ensure_installed = {"cpp", "css", "go", "graphql", "javascript", "json", "bibtex", "latex", "html", "python", "scss",
-  	"tsx", "typescript", "yaml", "lua"},
+  	"tsx", "typescript", "yaml", "lua", "java"},
   highlight = {
     enable = true,
   },

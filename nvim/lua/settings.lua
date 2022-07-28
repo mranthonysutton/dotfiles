@@ -38,7 +38,7 @@ vim.cmd([[
   filetype plugin indent on
   let g:prettier#config#single_quote = 'true'
   autocmd BufWritePre *js,*ts,*jsx,*tsx,*.graphql,*.json,*.md,*.mdx,*.html,*.css :Prettier
-  let g:mkdp_browser = 'brave-browser'
+  let g:mkdp_browser = 'firefox'
   let g:autopep8_on_save = 1
   let g:autopep8_disable_show_diff = 1
   let g:go_bin_path="/home/anthony/go/bin"
