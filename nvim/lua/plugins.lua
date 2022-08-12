@@ -22,6 +22,7 @@ return require('packer').startup(function()
   use 'dracula/vim'
   use 'arcticicestudio/nord-vim'
   use 'lalitmee/cobalt2.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- LSP
   use 'neovim/nvim-lspconfig'
