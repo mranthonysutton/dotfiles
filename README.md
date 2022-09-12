@@ -11,3 +11,7 @@
 `sudo lsblk` to view attached devices and to get the name of the device
 
 `sudo dd bs=4M if=name_of_iso.iso of=/dev/sdx conv=fsync oflag=direct status=progress`
+
+## Other Resources
+- [Helix Editor](https://github.com/helix-editor/helix)
+- [Nala Apt Wrapper](https://gitlab.com/volian/nala)
