@@ -15,13 +15,9 @@ return require('packer').startup(function()
   -- Look / feel
   use 'gruvbox-community/gruvbox'
   use 'ryanoasis/vim-devicons'
-  use 'tjdevries/colorbuddy.vim'
-  use 'tjdevries/gruvbuddy.nvim'
   use 'mhartington/oceanic-next'
   use 'ayu-theme/ayu-vim'
   use 'dracula/vim'
-  use 'arcticicestudio/nord-vim'
-  use 'lalitmee/cobalt2.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
 
   -- LSP
@@ -52,5 +48,6 @@ return require('packer').startup(function()
   use 'tell-k/vim-autopep8'
   use 'ap/vim-css-color'
   use 'mattn/emmet-vim'
+  use 'rhysd/vim-grammarous'
 end
 )

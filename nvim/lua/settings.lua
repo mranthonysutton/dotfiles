@@ -43,6 +43,8 @@ vim.cmd([[
   let g:autopep8_disable_show_diff = 1
   let g:go_bin_path="/home/anthony/go/bin"
   let g:go_highlight_types = 1
+  set spell
+  set spelllang=en_us
 ]])
   --set spell
   --set spelllang=en_us
