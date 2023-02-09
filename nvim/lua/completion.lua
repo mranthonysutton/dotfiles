@@ -82,5 +82,8 @@ lspconfig.pylsp.setup{ default_config }
 lspconfig.ccls.setup{ default_config }
 lspconfig.texlab.setup{ default_config }
 lspconfig.tailwindcss.setup{ default_config }
+lspconfig.rust_analyzer.setup{ default_config }
+lspconfig.sumneko_lua.setup{ default_config }
 lspconfig.gopls.setup{ gopls_config }
 lspconfig.jdtls.setup{ cmd = {'jdtls'} }
+

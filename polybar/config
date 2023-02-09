@@ -51,14 +51,14 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "JetBrainsMono Nerd Font Mono:size=8;0"
+font-0 = "CaskaydiaCove Nerd Font Mono:size=10;0"
 # font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 # font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-center = date
+modules-center = date pulseaudio
 # modules-right = alsa cpu wlan eth temperature date
-modules-right = cpu powermenu
+modules-right = memory cpu powermenu
 
 tray-position = right
 tray-padding = 2
@@ -211,7 +211,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = " CPU: "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 label = %percentage:2%%
@@ -219,7 +219,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = " RAM: "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
@@ -427,3 +427,4 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
+
