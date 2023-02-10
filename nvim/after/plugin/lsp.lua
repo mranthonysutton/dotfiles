@@ -24,6 +24,7 @@ lsp.on_attach(function(client, bufnr)
 
     vim.keymap.set("n", "<leader>gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
+    vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format {} end)
 end)
 
 lsp.setup()

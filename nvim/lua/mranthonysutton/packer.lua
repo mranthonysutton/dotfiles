@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
         use('tpope/vim-fugitive')
         use('preservim/nerdcommenter')
         use { 'iamcco/markdown-preview.nvim' }
+        use('jiangmiao/auto-pairs')
 
         -- Treesitter/Telescope
         use {
