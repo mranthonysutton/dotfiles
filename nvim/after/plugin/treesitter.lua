@@ -14,6 +14,10 @@ require 'nvim-treesitter.configs'.setup {
     },
 
     autotag = {
-      enable = true
+        enable = true
     },
+
+    sources = {
+        { name = 'nvim_lsp', keyword_length = 1 }
+    }
 }

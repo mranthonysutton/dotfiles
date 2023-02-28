@@ -7,9 +7,12 @@ return require('packer').startup(function(use)
       -- Packer can manage itself
       use 'wbthomason/packer.nvim'
 
-      use { "catppuccin/nvim", as = "catppuccin", config = function()
-        vim.cmd('colorscheme catppuccin-mocha')
-      end }
+
+      -- Themes
+      use("ellisonleao/gruvbox.nvim")
+      use "rebelot/kanagawa.nvim"
+      use { "catppuccin/nvim", as = "catppuccin" }
+      use { 'rose-pine/neovim', as = 'rose-pine' }
 
       -- Utils
       use('tpope/vim-fugitive')
@@ -18,7 +21,6 @@ return require('packer').startup(function(use)
       use('jiangmiao/auto-pairs')
       use('windwp/nvim-ts-autotag')
       use('norcalli/nvim-colorizer.lua')
-      use("ellisonleao/gruvbox.nvim")
 
       -- Treesitter/Telescope
       use {
