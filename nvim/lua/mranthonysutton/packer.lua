@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
       use('jiangmiao/auto-pairs')
       use('windwp/nvim-ts-autotag')
       use('norcalli/nvim-colorizer.lua')
+      use('fatih/vim-go')
 
       -- Treesitter/Telescope
       use {
