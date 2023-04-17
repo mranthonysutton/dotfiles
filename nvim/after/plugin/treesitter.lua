@@ -1,23 +1,16 @@
-require 'nvim-treesitter.configs'.setup {
-    -- A list of parser names, or "all" (the four listed parsers should always be installed)
-    ensure_installed = { "javascript", "typescript", "latex", "css", "go", "html", "markdown", "scss", "python", "lua", "vim", "help", "rust" },
+require'nvim-treesitter.configs'.setup {
+  -- A list of parser names, or "all"
+  ensure_installed = { "help", "javascript", "typescript", "go", "python", "scss", "css", "latex", "lua", "rust" },
 
-    -- Automatically install missing parsers when entering buffer
-    -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-    auto_install = true,
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = false,
 
-    highlight = {
-        -- `false` will disable the whole extension
-        enable = true,
+  -- Automatically install missing parsers when entering buffer
+  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+  auto_install = true,
 
-        additional_vim_regex_highlighting = false,
-    },
-
-    autotag = {
-        enable = true
-    },
-
-    sources = {
-        { name = 'nvim_lsp', keyword_length = 1 }
-    }
+  highlight = {
+          -- `false` will disable the whole extension
+          enable = true,
+  },
 }

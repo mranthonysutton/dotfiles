@@ -1,30 +1,25 @@
-local lsp = require('lsp-zero')
+local lsp = require("lsp-zero")
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-    'tsserver',
-    'lua_ls',
-    'rust_analyzer',
+	'tsserver',
+	'eslint',
+	'sumneko_lua',
+	'cssls',
+	'gopls',
+	'html',
     'pylsp',
-    'texlab',
-    'tailwindcss',
-    'cssls',
-    'html',
-    'marksman' -- markdown lsp
 })
 
 local cmp = require('cmp')
---local cmp_select = {behavior = cmp.SelectBehavior.Select}
-
--- (Optional) Configure lua language server for neovim
-lsp.nvim_workspace()
+local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
 lsp.on_attach(function(client, bufnr)
-    local opts = { buffer = bufnr, remap = false }
+	local opts = {buffer = bufnr, remap = false}
 
-    vim.keymap.set("n", "<leader>gd", function() vim.lsp.buf.definition() end, opts)
-    vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
-    vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format {} end)
+	vim.keymap.set("n", "gd", function() vim.lsp.vuf.definition() end, opts)
+	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+	vim.keymap.set("n", "<leader>sd", vim.diagnostic.open_float, opts)
 end)
 
 lsp.setup()
