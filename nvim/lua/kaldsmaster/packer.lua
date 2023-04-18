@@ -1,52 +1,54 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
 -- Only required if you have packer configured as `opt`
---vim.cmd [[packadd packer.nvim]]
+vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-  use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
-	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-}
+	-- Packer can manage itself
+	use 'wbthomason/packer.nvim'
 
-use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-                vim.cmd('colorscheme rose-pine')
-        end
-})
+	use {
+		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		-- or                            , branch = '0.1.x',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
 
-use('nvim-treesitter/nvim-treesitter', {run =  ':TSUpdate'})
-use('nvim-treesitter/playground')
-use('mbbill/undotree')
-use('tpope/vim-fugitive')
-use('fatih/vim-go')
-use('preservim/nerdcommenter')
+	use({
+		'rose-pine/neovim',
+		as = 'rose-pine',
+		config = function()
+			vim.cmd('colorscheme rose-pine')
+		end
+	})
+    use { "ellisonleao/gruvbox.nvim" }
+    use('mhartington/oceanic-next')
 
-use {
-        'VonHeikemen/lsp-zero.nvim',
-        requires = {
-                -- LSP Support
-                {'neovim/nvim-lspconfig'},
-                {'williamboman/mason.nvim'},
-                {'williamboman/mason-lspconfig.nvim'},
+	use('nvim-treesitter/nvim-treesitter', {run =  ':TSUpdate'})
+	use('nvim-treesitter/playground')
+	use('mbbill/undotree')
+	use('tpope/vim-fugitive')
+	use('fatih/vim-go')
+	use('preservim/nerdcommenter')
 
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},
-    {'hrsh7th/cmp-buffer'},
-    {'hrsh7th/cmp-path'},
-    {'saadparwaiz1/cmp_luasnip'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'hrsh7th/cmp-nvim-lua'},
+	use {
+		'VonHeikemen/lsp-zero.nvim',
+		requires = {
+			-- LSP Support
+			{'neovim/nvim-lspconfig'},
+			{'williamboman/mason.nvim'},
+			{'williamboman/mason-lspconfig.nvim'},
 
-    -- Snippets
-    {'L3MON4D3/LuaSnip'},
-    {'rafamadriz/friendly-snippets'},
-  }
-}
+			-- Autocompletion
+			{'hrsh7th/nvim-cmp'},
+			{'hrsh7th/cmp-buffer'},
+			{'hrsh7th/cmp-path'},
+			{'saadparwaiz1/cmp_luasnip'},
+			{'hrsh7th/cmp-nvim-lsp'},
+			{'hrsh7th/cmp-nvim-lua'},
+
+			-- Snippets
+			{'L3MON4D3/LuaSnip'},
+			{'rafamadriz/friendly-snippets'},
+		}
+	}
+
 
 end)

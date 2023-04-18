@@ -4,11 +4,15 @@ lsp.preset('recommended')
 lsp.ensure_installed({
 	'tsserver',
 	'eslint',
-	'sumneko_lua',
+    'lua_ls',
 	'cssls',
 	'gopls',
 	'html',
     'pylsp',
+    'jsonls',
+    'texlab',
+    'rust_analyzer',
+    'tailwindcss',
 })
 
 local cmp = require('cmp')
@@ -23,3 +27,4 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+
