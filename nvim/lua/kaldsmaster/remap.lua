@@ -8,3 +8,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Search and replaces the current word that is highlighted test
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- formats on save
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
