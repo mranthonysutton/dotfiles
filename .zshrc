@@ -13,7 +13,7 @@ export PATH=/usr/local/go/bin:$PATH
 ZSH_THEME="robbyrussell"
 
 # Alias
-alias buildnvim="make CMAKE_BUILD_TYPE=Release && sudo make install"
+alias buildnvim="sudo make CMAKE_BUILD_TYPE=RelWithDebInfo && sudo make install"
 alias updateupgrade="sudo apt update && sudo apt upgrade"
 alias python="python3"
 alias cdnvim="cd ~/Storage/Development/Resources/neovim"
