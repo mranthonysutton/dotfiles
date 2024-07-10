@@ -15,8 +15,8 @@
 return {
   "fatih/vim-go",
   config = function()
-    vim.keymap.set("n", "<leader>sj", "<cmd>GoTagAdd <CR>")
-    vim.keymap.set("n", "<leader>sy", "<cmd>GoTagAdd yaml<CR>")
+    vim.keymap.set("n", "<leader>sj", "<cmd>GoAddTags <CR>")
+    vim.keymap.set("n", "<leader>sy", "<cmd>GoAddTags yaml<CR>")
   end,
   build = function ()
     vim.cmd.GoInstallBinaries()
